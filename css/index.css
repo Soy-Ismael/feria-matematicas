@@ -1,10 +1,230 @@
-*{
+:root {
+    --titleFont: 'Open Sans', sans-serif;
+    --contentFont: 'Roboto', sans-serif;
+}
+
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
+    overflow-X: hidden;
 }
 
+body {
+    background-color: rgb(194, 200, 205);
+}
+
+main{
+    padding: .5rem;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contenedorInformacionCasino{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+    .cajaInformacionCasino {
+        padding: 2rem;
+        width: 90%;
+        border-radius: 8px;
+        box-shadow: -.4rem .4rem 10px rgba(120, 120, 120, 0.5);
+        font-family: var(--contentFont);
+    }
+
+        .encabezadoInformacionCasino{
+            font-family: var(--titleFont);
+        }
+
+        .textoInformacionCasino{
+            font-family: var(--contentFont);
+            
+        }
+
+        
+.contenedorNovedades{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+    .encabezadoNovedades, .encabezadoActividades{
+        margin: 2.5rem auto 1.5rem;
+        text-align: center;
+        font-size: 30px;
+        font-family: var(--titleFont);
+    }
+
+        .novedad {
+            width: 14rem;
+            background-color: #fff;
+            height: 20rem;
+            border-radius: 8px;
+            box-shadow: -.2rem .2rem 10px rgba(120, 120, 120, 0.5);
+            display: flex;
+            flex-direction: column;
+        }
+
+            .imagenNovedad {
+                width: 100%;
+                height: auto;
+                border-radius: inherit;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            .nombreNovedad {
+                width: 100%;
+                border-radius: inherit;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                background-color: aliceblue;
+                flex: 1 1 auto;
+                text-align: center;
+                font-family: var(--titleFont);
+            }
+
+.contenedorActividades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedorSlider {
+    position: relative;
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+}
+
+    .slider {
+        display: flex;
+        aspect-ratio: 16 / 9;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        box-shadow: 0 1.5rem 3rem -0.75rem hsla(0%, 0%, 0%, 0.25);
+        border-radius: 0.5rem;
+    }
+
+        .slider::-webkit-scrollbar{
+            display: none;
+        }
+
+        .slider > img {
+            flex: 1 0 100%;
+            scroll-snap-align: start;
+            object-fit: cover;
+        }
+
+    .sliderNav {
+        display: flex;
+        column-gap: 1rem;
+        position: absolute;
+        bottom: 1.25rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+    }
+
+        .sliderNav a {
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 50%;
+            background-color: #fff;
+            opacity: 0.75;
+            transform: opacity ease 250ms;
+        }
+
+            .sliderNav a:hover {
+                opacity: 1;
+            }
+
+footer{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+    .navFooter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+        .logoFooter {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logoFooter > img {
+            max-width: 5rem;
+        }
+
+        .logoFooter > h4 {
+            font-family: var(--titleFont);
+            font-size: 20px;
+        }
+
+        .redes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .8rem;
+        }
+            .redes i{
+                font-size: 2.5rem;
+            }
+            
+            .footerBreak {
+                border: 2px solid rgba(0, 0, 0, 0.25);
+                border-radius: 2px;
+        margin: 1.5rem 0;
+    }
+
+    .informacionContacto {
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: .9rem;
+        font-family: var(--contentFont);
+        margin-bottom: 2rem;
+    }
+
+    .enlacesFooter {
+        position: relative;
+        left: 50%;
+        translate: -50%;
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+    }
+
+    .enlacesFooter a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        font-family: var(--contentFont);
+    }
+
+        .enlacesFooter a:hover {
+            color: #669;
+        }
+    
+    .copyright {
+        font-family: var(--contentFont);
+    }
  
 
 header{
@@ -143,4 +363,4 @@ span{
     opacity: 0.75;
 }
 
-/* De aqui arriba header completo */    
+/*
