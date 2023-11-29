@@ -7,5 +7,6 @@
 </head>
 <body>
     <h1>Casino</h1>
+    <?php require('./php/layout/menu.php'); ?>
 </body>
 </html>
