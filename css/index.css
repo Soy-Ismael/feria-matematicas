@@ -3,8 +3,152 @@
     --contentFont: 'Roboto', sans-serif;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
 body {
     background-color: rgb(194, 200, 205);
+}
+
+
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 75vh;
+    background: url(/img_Index/casino_icono.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* navegacion y demas de aqui para abajo */
+
+nav{
+    display: flex;
+    flex-direction: row;
+    background-color: blueviolet;
+    height: 16%;
+    
+}
+
+.logo{
+    display: flex;
+    width: 100px;
+    margin-right: 10px;
+}
+
+.img_Logo{
+    width: 55px;
+    align-self: center;
+    margin-left: 10%;
+}
+
+.img_Logo:hover{
+    opacity: 0.80;
+}
+
+.links{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: end;
+}
+
+nav .links a {
+    width: 30vh;
+    height: 12vh;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    
+}   
+
+nav .links a:hover{
+    background-color: aqua;
+    transition: 0.5s;
+}
+
+.img_icono{
+    width: 25px;
+    margin-right: 5px;
+}
+
+span{
+    font-family: Open Sans;
+    color: blanchedalmond;
+    font-size: 17px;
+}
+
+/* Navegacion de aqui para arriba */
+
+/* Info y demas de aqui para abajo */
+
+.nombre_Casino{
+    display: flex;
+    justify-content: flex-end ;
+    
+}
+
+.nombre_Casino h1{
+    margin-right: 150px;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: brown;
+    color: aliceblue;
+    border-radius: 16px;
+    
+}
+
+.info-button{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    
+
+}
+
+.info-button .info{
+    margin-right: 150px;
+    margin-top: 10px;
+    padding: 20px;
+    width: 300px;
+    background-color: burlywood;
+    border-radius: 8px;
+
+}
+
+.info-button .info p{
+    color: white;
+    font-family: Roboto;
+    
+
+}
+
+.button-header{
+    width: 200px;
+    height: 50px;
+    font-family: Open Sans;
+    font-size: 20px;
+    margin-right: 15px;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 16px;
+    border: 4px outset gray;
+}
+
+.button-header:hover{
+    opacity: 0.85;
+}
+
+.button-header:focus{
+    opacity: 0.75;
 }
 
 main{
@@ -167,7 +311,7 @@ footer{
 
         .logoFooter > h4 {
             font-family: var(--titleFont);
-            font-size: 20px;
+            font-size: 1rem;
         }
 
         .redes {
@@ -219,141 +363,3 @@ footer{
         font-family: var(--contentFont);
     }
  
-
-header{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 75vh;
-    background: url(/img_Index/casino_icono.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-/* navegacion y demas de aqui para abajo */
-
-nav{
-    display: flex;
-    flex-direction: row;
-    background-color: blueviolet;
-    height: 16%;
-    
-}
-
-.logo{
-    display: flex;
-    width: 100px;
-    margin-right: 10px;
-}
-
-.img_Logo{
-    width: 55px;
-    align-self: center;
-    margin-left: 10%;
-}
-
-.img_Logo:hover{
-    opacity: 0.80;
-}
-
-.links{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: end;
-}
-
-nav .links a {
-    width: 30vh;
-    height: 12vh;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    
-}   
-
-nav .links a:hover{
-    background-color: aqua;
-    transition: 0.5s;
-}
-
-.img_icono{
-    width: 25px;
-    margin-right: 5px;
-}
-
-span{
-    font-family: Open Sans;
-    color: blanchedalmond;
-    font-size: 17px;
-}
-
-/* Navegacion de aqui para arriba */
-
-/* Info y demas de aqui para abajo */
-
-.nombre_Casino{
-    display: flex;
-    justify-content: flex-end ;
-    
-}
-
-.nombre_Casino h1{
-    margin-right: 150px;
-    margin-top: 10px;
-    padding: 20px;
-    background-color: brown;
-    color: aliceblue;
-    border-radius: 16px;
-    
-}
-
-.info-button{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-    align-items: center;
-    
-
-}
-
-.info-button .info{
-    margin-right: 150px;
-    margin-top: 10px;
-    padding: 20px;
-    width: 300px;
-    background-color: burlywood;
-    border-radius: 8px;
-
-}
-
-.info-button .info p{
-    color: white;
-    font-family: Roboto;
-    
-
-}
-
-.button-header{
-    width: 200px;
-    height: 50px;
-    font-family: Open Sans;
-    font-size: 20px;
-    margin-right: 15px;
-    background-color: black;
-    color: aliceblue;
-    border-radius: 16px;
-    border: 4px outset gray;
-}
-
-.button-header:hover{
-    opacity: 0.85;
-}
-
-.button-header:focus{
-    opacity: 0.75;
-}
-
-/*
