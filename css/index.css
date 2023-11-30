@@ -1,6 +1,12 @@
 :root {
     --titleFont: 'Open Sans', sans-serif;
     --contentFont: 'Roboto', sans-serif;
+    --colorLetra: white;
+    --rojoClaro: #6b0a0a;
+    --rojoOscuro: #440b0b;
+    --moradoClaro: #551382;
+    --moradoOscuro: #21073a;
+    --negroBase: #000000;
 }
 
 * {
@@ -11,7 +17,7 @@
 }
 
 body {
-    background-color: rgb(194, 200, 205);
+    background-color: var(--colorLetra);
 }
 
 
@@ -19,7 +25,7 @@ header{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 75vh;
+    height: 90vh;
     background: url(/img_Index/casino_icono.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -81,7 +87,7 @@ nav .links a:hover{
 
 span{
     font-family: Open Sans;
-    color: blanchedalmond;
+    color: white;
     font-size: 17px;
 }
 
@@ -90,9 +96,9 @@ span{
 /* Info y demas de aqui para abajo */
 
 .nombre_Casino{
+    width: 100%;
     display: flex;
-    justify-content: flex-end ;
-    
+    justify-content: flex-end;
 }
 
 .nombre_Casino h1{
@@ -105,51 +111,57 @@ span{
     
 }
 
-.info-button{
+.contenedorBotonDescripcion{
+    width: 100%;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-    align-items: center;
-    
-
+    justify-content: flex-end;
 }
 
-.info-button .info{
-    margin-right: 150px;
-    margin-top: 10px;
-    padding: 20px;
-    width: 300px;
-    background-color: burlywood;
-    border-radius: 8px;
-
-}
-
-.info-button .info p{
-    color: white;
-    font-family: Roboto;
-    
-
-}
-
-.button-header{
+.botonDescripcion{
     width: 200px;
     height: 50px;
     font-family: Open Sans;
     font-size: 20px;
-    margin-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 2px;
+    margin-right: 200px;
     background-color: black;
     color: aliceblue;
     border-radius: 16px;
     border: 4px outset gray;
 }
 
-.button-header:hover{
+.botonDescripcion:hover{
     opacity: 0.85;
 }
 
-.button-header:focus{
+.botonDescripcion:focus{
     opacity: 0.75;
 }
+
+.contenedorHeaderDescripcion{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+ .textoDescripcion{
+    padding: 20px;
+    width: 300px;
+    margin-right: 150px ;
+    background-color: burlywood;
+    border-radius: 8px;
+
+}
+
+.textoDescripcion p{
+    color: white;
+    font-family: Roboto;
+    
+
+}
+
 
 main{
     padding: .5rem;
@@ -287,7 +299,6 @@ main{
             }
 
 footer{
-    height: 50vh;
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
@@ -316,7 +327,6 @@ footer{
 
         .redes {
             display: flex;
-            flex-wrap: wrap;
             gap: .8rem;
         }
             .redes i{
@@ -330,7 +340,7 @@ footer{
     }
 
     .informacionContacto {
-        font-size: 18px;
+        font-size: 1rem;
         display: flex;
         flex-direction: column;
         gap: .9rem;
