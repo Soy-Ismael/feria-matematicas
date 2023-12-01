@@ -6,6 +6,12 @@
     --coloFondo: #f0;
     --colorSecundario: #f0;
     --colorAcento: #f0;
+
+    --rojoClaro: #6b0a0a;
+    --rojoOscuro: #440b0b;
+    --moradoClaro: #551382;
+    --moradoOscuro: #21073a;
+
 }
 
 * {
@@ -53,6 +59,28 @@ nav{
     font-size: 20px;
 }
 
+@media screen and (max-width: 370px){
+    .logo{
+     width: 4rem;
+    }
+    
+     .logo > h1{
+         display: none;
+     }
+   
+ }
+
+@media screen and (max-width: 310px){
+   .logo{
+    width: 4rem;
+   }
+   
+    .logo > h1{
+        display: none;
+    }
+  
+}
+
 .img_Logo{
     max-width: 3em;
     align-self: center;
@@ -62,6 +90,11 @@ nav{
 
 .img_Logo:hover{
     opacity: 0.80;
+}
+@media screen and (max-width: 310px){
+    
+
+  
 }
 
 .links{
@@ -85,7 +118,54 @@ nav .links a {
     flex-grow: 1;
     transition: .3s;
 
-}   
+}  
+
+@media screen and (max-width: 1024px){
+    nav .links a{
+        background-color: var(--rojoOscuro);
+        height: 5rem;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 690px){
+    /* .img_icono{
+        display: none;
+    } */
+
+    span{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 490px){
+    nav .links a{
+        height: 3rem;
+    }
+  
+}
+
+
+@media screen and (max-width: 412px){
+    nav .links a{
+        background: none;
+    }
+  
+}
+
+@media screen and (max-width: 412px){
+    nav .links a{
+        background: var(--rojoOscuro);
+    }
+}
+
+@media screen and (max-width: 310px){
+    nav .links a{
+        background: none;
+        width: 5rem;
+    }
+  
+}
 
 nav .links a > img {
     filter: invert();
@@ -123,6 +203,73 @@ span{
     /* text-shadow: -.1rem .1rem 0 rgba(120, 120, 120, 0.5), .1rem -.1rem 0 rgba(242, 7, 7, 0.5); */
     border-radius: 16px;
     font-family: var(--fuenteTitulo);
+}
+
+@media screen and (max-width: 990px){
+    .nombreCasino{
+        background-color: var(--moradoOscuro);
+        margin-bottom: 10px;
+    }
+
+}
+
+@media screen and (max-width: 550px){
+    .nombreCasino{
+        margin-right: 100px;
+    }
+
+}
+
+@media screen and (max-width: 475px){
+    .nombreCasino{
+        margin-right: 60px;
+    }
+
+}
+
+@media screen and (max-width: 385px){
+    .nombreCasino{
+        margin-right: 30px;
+    }
+
+}
+
+@media screen and (max-width: 350px){
+    .nombreCasino{
+        transform: scale(0.7);
+        margin-bottom: 0;
+    }
+
+}
+
+@media screen and (max-width: 350px){
+    .nombreCasino{
+        transform: scale(0.7);
+    }
+
+}
+
+@media screen and (max-width: 350px){
+    .nombreCasino{
+        transform: scale(0.5);
+        width: 350px;
+        margin-right: 3px;
+    }
+
+}
+
+@media screen and (max-width: 290px){
+    .seccionHeroe{
+        align-items: center;
+    }
+    
+    .nombreCasino{
+        transform: scale(0.5);
+        margin-right:0 ;
+        margin-left: 0;
+        
+    }
+
 }
 
 
@@ -171,6 +318,7 @@ span{
 .textoDescripcion{
     padding: 20px;
     width: 300px;
+    height: auto;
     margin-right: 150px ;
     border-radius: 8px;
 }
@@ -183,6 +331,64 @@ span{
     text-align: center;
 }
 
+@media screen and (max-width: 1150px){
+
+    .textoDescripcion{
+        background-color: var(--moradoOscuro);
+    }
+}
+
+@media screen and (max-width: 550px){
+    .textoDescripcion{
+        margin-right: 100px;
+    }
+
+}
+
+@media screen and (max-width: 475px){
+    .textoDescripcion{
+        margin-right: 60px;
+    }
+
+}
+@media screen and (max-width: 385px){
+    .textoDescripcion{
+        margin-right: 30px;
+    }
+
+}
+
+@media screen and (max-width: 350px){
+    .textoDescripcion{
+        transform: scale(0.7);
+        margin-top: 0;
+    }
+
+}
+
+@media screen and (max-width: 350px){
+    .textoDescripcion{
+        transform: scale(0.7);
+        width: 350px;
+        height: auto;
+        margin-right: 3px;
+    }
+
+}
+
+@media screen and (max-width: 290px){
+    .seccionHeroe{
+        align-items: center;
+    }
+    
+    .textoDescripcion{
+        transform: scale(0.5);
+        margin-right:0 ;
+        margin-left: 0;
+        
+    }
+
+}
 
 main{
     padding: .5rem;
