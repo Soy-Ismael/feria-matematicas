@@ -213,8 +213,10 @@ span{
 .nombreCasino{
     padding: 20px;
     color: rgb(205, 111, 255);
-    text-shadow: -.1rem .1rem 0 rgba(120, 120, 120, 0.5), .1rem -.1rem 0 rgba(120, 120, 120, 0.5);
+    margin-right: 150px;
+    /* text-shadow: -.1rem .1rem 0 rgba(120, 120, 120, 0.5), .1rem -.1rem 0 rgba(120, 120, 120, 0.5); */
     font-family: var(--fuenteTitulo);
+    border-radius: 16px;
 }
 
 @media screen and (max-width: 990px){
@@ -225,60 +227,52 @@ span{
 
 }
 
-@media screen and (max-width: 550px){
+@media screen and (max-width: 541px){
     .nombreCasino{
-        margin-right: 100px;
+        margin-right: 75px;
     }
 
 }
 
 @media screen and (max-width: 475px){
     .nombreCasino{
-        margin-right: 60px;
+        margin-right: 30px;
+    }
+
+}
+
+@media screen and (max-width: 431px){
+    .nombreCasino{
+        margin-right: 17px;
     }
 
 }
 
 @media screen and (max-width: 385px){
     .nombreCasino{
-        margin-right: 30px;
-    }
-
-}
-
-@media screen and (max-width: 350px){
-    .nombreCasino{
-        transform: scale(0.7);
-        margin-bottom: 0;
-    }
-
-}
-
-@media screen and (max-width: 350px){
-    .nombreCasino{
+        margin-right: -15px;
         transform: scale(0.7);
     }
 
 }
 
-@media screen and (max-width: 350px){
+
+@media screen and (max-width: 361px){
     .nombreCasino{
-        transform: scale(0.5);
-        width: 350px;
-        margin-right: 3px;
+        transform: scale(0.7);
+        margin-right: -10px;
     }
 
 }
 
-@media screen and (max-width: 290px){
+@media screen and (max-width: 281px){
     .seccionHeroe{
         align-items: center;
     }
     
     .nombreCasino{
-        transform: scale(0.5);
-        margin-right:0 ;
-        margin-left: 0;
+        transform: scale(0.7);
+        margin-right:-75px ;
         
     }
 
@@ -287,6 +281,7 @@ span{
 .textoDescripcion{
     padding: 1.2rem;
     width: 20rem;
+    margin-right: 95px;
     /* margin-right: 150px ; */
     border-radius: 8px;
 }
@@ -297,6 +292,68 @@ span{
     font-size: 18px;
     font-family: var(--fuenteContenido);
     text-align: center;
+}
+
+@media screen and (max-width: 1025px){
+    .textoDescripcion{
+        background-color: var(--moradoOscuro);
+        margin-bottom: 10px;
+    }
+
+}
+
+@media screen and (max-width: 541px){
+    .textoDescripcion{
+        margin-right: 15px;
+    }
+
+}
+
+@media screen and (max-width: 475px){
+    .textoDescripcion{
+        margin-right: -20px;
+    }
+
+}
+
+@media screen and (max-width: 430px){
+    .textoDescripcion{
+        margin-right: -40px;
+    }
+
+}
+
+@media screen and (max-width: 391px){
+    .textoDescripcion{
+        margin-right: -50px;
+    }
+
+}
+
+@media screen and (max-width: 361px){
+    .textoDescripcion{
+        margin-right: -70px;
+        margin-top: 5px;
+    }
+
+}
+
+@media screen and (max-width: 376px){
+    .textoDescripcion{
+        transform: scale(0.8);
+        margin-right: -75px;
+    }
+
+}
+
+@media screen and (max-width: 290px){
+    
+    .textoDescripcion{
+        transform: scale(0.7);
+        margin-right:-90 ;
+        
+    }
+
 }
 
 /* .contenedorBotonDescripcion{
@@ -334,27 +391,10 @@ span{
     font-family: var(--fuenteContenido);
 } */
 
-.seccionHeroe {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-}
 
-.textoDescripcion{
-    padding: 20px;
-    width: 300px;
-    margin-right: 150px ;
-    border-radius: 8px;
-}
 
-.textoDescripcion p{
-    color: white;
-    font-weight: 500;
-    font-size: 18px;
-    font-family: var(--fuenteContenido);
-    text-align: center;
-}
+
+
 
 
 main{
