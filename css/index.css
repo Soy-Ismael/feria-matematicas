@@ -1,12 +1,11 @@
 :root {
-    --titleFont: 'Open Sans', sans-serif;
-    --contentFont: 'Roboto', sans-serif;
+    --fuenteTitulo: 'Open Sans', sans-serif;
+    --fuenteContenido: 'Roboto', sans-serif;
     --colorLetra: white;
-    --rojoClaro: #6b0a0a;
-    --rojoOscuro: #440b0b;
-    --moradoClaro: #551382;
-    --moradoOscuro: #21073a;
-    --negroBase: #000000;
+    --colorAcentoLetra: #f0;
+    --coloFondo: #f0;
+    --colorSecundario: #f0;
+    --colorAcento: #f0;
 }
 
 * {
@@ -25,8 +24,8 @@ header{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 90vh;
-    background: url(/img_Index/casino_icono.png);
+    height: 100dvh;
+    background: url(/assets/img/casinoBg8r.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -35,22 +34,30 @@ header{
 
 nav{
     display: flex;
-    flex-direction: row;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     height: 16%;
-    
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1rem;
 }
 
 .logo{
     display: flex;
-    width: 100px;
-    margin-right: 10px;
+    width: 15em;
+    gap: 1rem;
+}
+
+.logo > h1 {
+    color: white;
+    font-family: var(--fuenteTitulo);
+    font-size: 20px;
 }
 
 .img_Logo{
-    width: 55px;
+    max-width: 3em;
     align-self: center;
     margin-left: 10%;
+    filter: invert();
 }
 
 .img_Logo:hover{
@@ -59,25 +66,34 @@ nav{
 
 .links{
     display: flex;
-    width: 100%;
+    width: 50%;
     align-items: center;
     justify-content: end;
+    gap: .5rem;
 }
 
 nav .links a {
-    width: 30vh;
+    flex: 1 1 auto;
     height: 12vh;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    
+    font-family: var(--fuenteTitulo);
+    font-weight: bold;
+
 }   
 
+nav .links a > img {
+    filter: invert();
+}
+
 nav .links a:hover{
-    background-color: aqua;
+    opacity: 0.8;
+    filter: brightness(1.5);
     transition: 0.5s;
+    transform: scale(1.2);
 }
 
 .img_icono{
@@ -86,7 +102,7 @@ nav .links a:hover{
 }
 
 span{
-    font-family: Open Sans;
+    font-family: var(--fuenteTitulo);
     color: white;
     font-size: 17px;
 }
@@ -95,37 +111,32 @@ span{
 
 /* Info y demas de aqui para abajo */
 
-.nombre_Casino{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.nombre_Casino h1{
+.nombreCasino{
     margin-right: 150px;
     margin-top: 10px;
     padding: 20px;
-    background-color: brown;
-    color: aliceblue;
+    color: rgb(205, 111, 255);
+    text-shadow: -.1rem .1rem 0 rgba(120, 120, 120, 0.5), .1rem -.1rem 0 rgba(120, 120, 120, 0.5);
     border-radius: 16px;
-    
+    font-family: var(--fuenteTitulo);
 }
 
-.contenedorBotonDescripcion{
+
+/* .contenedorBotonDescripcion{
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    font-family: var(--fuenteTitulo);
 }
 
 .botonDescripcion{
     width: 200px;
     height: 50px;
-    font-family: Open Sans;
+    font-family: var(--fuenteTitulo);
     font-size: 20px;
     margin-top: 15px;
     margin-bottom: 2px;
     margin-right: 200px;
-    background-color: black;
     color: aliceblue;
     border-radius: 16px;
     border: 4px outset gray;
@@ -137,29 +148,35 @@ span{
 
 .botonDescripcion:focus{
     opacity: 0.75;
-}
+} */
 
-.contenedorHeaderDescripcion{
+/* .contenedorHeaderDescripcion{
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    font-family: var(--fuenteContenido);
+} */
 
+.seccionHeroe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
 }
 
- .textoDescripcion{
+.textoDescripcion{
     padding: 20px;
     width: 300px;
     margin-right: 150px ;
-    background-color: burlywood;
     border-radius: 8px;
-
 }
 
 .textoDescripcion p{
     color: white;
-    font-family: Roboto;
-    
-
+    font-weight: 500;
+    font-size: 18px;
+    font-family: var(--fuenteContenido);
+    text-align: center;
 }
 
 
@@ -183,15 +200,15 @@ main{
         width: 90%;
         border-radius: 8px;
         box-shadow: -.4rem .4rem 10px rgba(120, 120, 120, 0.5);
-        font-family: var(--contentFont);
+        font-family: var(--fuenteContenido);
     }
 
         .encabezadoInformacionCasino{
-            font-family: var(--titleFont);
+            font-family: var(--fuenteTitulo);
         }
 
         .textoInformacionCasino{
-            font-family: var(--contentFont);
+            font-family: var(--fuenteContenido);
             
         }
 
@@ -208,7 +225,7 @@ main{
         margin: 2.5rem auto 1.5rem;
         text-align: center;
         font-size: 30px;
-        font-family: var(--titleFont);
+        font-family: var(--fuenteTitulo);
     }
 
         .novedad {
@@ -237,7 +254,7 @@ main{
                 background-color: aliceblue;
                 flex: 1 1 auto;
                 text-align: center;
-                font-family: var(--titleFont);
+                font-family: var(--fuenteTitulo);
             }
 
 .contenedorActividades {
@@ -304,34 +321,69 @@ footer{
     padding: 1.5rem;
 }
 
-    .navFooter {
+.navFooter {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+    .logoFooter {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        gap: 1rem;
+        overflow: hidden;
+        width: 10rem;
+    }
+    
+    .logoFooter > img {
+        max-width: 4rem;
+        flex: 1 1 auto;
+    }
+    
+    .logoFooter > a {
+        flex: 1 1 auto;
+        font-family: var(--fuenteTitulo);
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: #669;
+
     }
 
-        .logoFooter {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+    .redes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: .2rem;
+        width: 10rem;
+    }
+    .redes i{
+        overflow: hidden;
+        margin: .5rem;
+        font-size: 2.5rem;
         }
 
-        .logoFooter > img {
-            max-width: 5rem;
+        .redes .fa-square-twitter {
+            color: rgb(65, 125, 255);
+        }
+        
+        .redes .fa-square-facebook {
+            color: rgb(0, 60, 188);
         }
 
-        .logoFooter > h4 {
-            font-family: var(--titleFont);
-            font-size: 1rem;
+        .redes .fa-square-instagram {
+            color: rgb(202, 0, 84);
         }
 
-        .redes {
-            display: flex;
-            gap: .8rem;
-        }
-            .redes i{
-                font-size: 2.5rem;
-            }
+        
+        .redes i:hover, .logoFooter > img:hover{
+            transform: scale(1.1);
+            transition: all 0.2s ease;
+            filter: brightness(1.1);
+         }
             
             .footerBreak {
                 border: 2px solid rgba(0, 0, 0, 0.25);
@@ -344,7 +396,7 @@ footer{
         display: flex;
         flex-direction: column;
         gap: .9rem;
-        font-family: var(--contentFont);
+        font-family: var(--fuenteContenido);
         margin-bottom: 2rem;
     }
 
@@ -362,7 +414,7 @@ footer{
         text-decoration: none;
         color: #333;
         font-weight: bold;
-        font-family: var(--contentFont);
+        font-family: var(--fuenteContenido);
     }
 
         .enlacesFooter a:hover {
@@ -370,6 +422,5 @@ footer{
         }
     
     .copyright {
-        font-family: var(--contentFont);
+        font-family: var(--fuenteContenido);
     }
- 
