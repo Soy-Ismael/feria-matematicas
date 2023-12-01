@@ -95,6 +95,8 @@ nav .links a:hover{
     opacity: 0.8;
     filter: brightness(10.5);
     transition: 1s;
+    flex-grow: 4;
+    flex-shrink: 3;
     /* transform: scale(1.2); */
 }
 
