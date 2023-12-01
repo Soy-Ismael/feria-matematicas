@@ -89,6 +89,8 @@ nav .links a {
     text-decoration: none;
     font-family: var(--fuenteTitulo);
     font-weight: bold;
+    flex-grow: 1;
+    transition: .3s;
 
 }   
 
