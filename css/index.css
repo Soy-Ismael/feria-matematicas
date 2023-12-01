@@ -2,9 +2,11 @@
     --fuenteTitulo: 'Open Sans', sans-serif;
     --fuenteContenido: 'Roboto', sans-serif;
     --colorLetra: white;
-    --colorAcentoLetra: #f0;
-    --coloFondo: #f0;
-    --colorSecundario: #f0;
+    --colorTituloCajas: #470e88;
+    --colorCajasTexto: rgb(247, 245, 255);
+    --coloFondo: #0b0810;
+    --colorAcentoLetra: rgb(77, 175, 255);
+    --colorSecundario: rgb(5, 5, 106);
     --colorAcento: #f0;
 }
 
@@ -16,7 +18,7 @@
 }
 
 body {
-    background-color: var(--colorLetra);
+    background-color: var(--coloFondo);
 }
 
 
@@ -45,6 +47,9 @@ nav{
     display: flex;
     width: 15em;
     gap: 1rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
 .logo > h1 {
@@ -60,8 +65,10 @@ nav{
     filter: invert();
 }
 
-.img_Logo:hover{
+.logo:hover{
     opacity: 0.80;
+    transition: 0.3s;
+    transform: scale(1.1);
 }
 
 .links{
@@ -89,16 +96,18 @@ nav .links a > img {
     filter: invert();
 }
 
-nav .links a:hover{
+nav .links a:hover > img{
     opacity: 0.8;
-    filter: brightness(1.5);
-    transition: 0.5s;
+    transition: 0.3s;
     transform: scale(1.2);
 }
 
+nav .links a:hover > span {
+    filter: brightness(0.5);
+}
 .img_icono{
-    width: 25px;
-    margin-right: 5px;
+    width: 1.5rem;
+    margin-right: .3rem;
 }
 
 span{
@@ -111,16 +120,35 @@ span{
 
 /* Info y demas de aqui para abajo */
 
+.seccionHeroe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 5rem;
+}
+
 .nombreCasino{
-    margin-right: 150px;
-    margin-top: 10px;
     padding: 20px;
     color: rgb(205, 111, 255);
     text-shadow: -.1rem .1rem 0 rgba(120, 120, 120, 0.5), .1rem -.1rem 0 rgba(120, 120, 120, 0.5);
-    border-radius: 16px;
     font-family: var(--fuenteTitulo);
 }
 
+.textoDescripcion{
+    padding: 1.2rem;
+    width: 20rem;
+    /* margin-right: 150px ; */
+    border-radius: 8px;
+}
+
+.textoDescripcion p{
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: var(--fuenteContenido);
+    text-align: center;
+}
 
 /* .contenedorBotonDescripcion{
     width: 100%;
@@ -157,41 +185,20 @@ span{
     font-family: var(--fuenteContenido);
 } */
 
-.seccionHeroe {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-.textoDescripcion{
-    padding: 20px;
-    width: 300px;
-    margin-right: 150px ;
-    border-radius: 8px;
-}
-
-.textoDescripcion p{
-    color: white;
-    font-weight: 500;
-    font-size: 18px;
-    font-family: var(--fuenteContenido);
-    text-align: center;
-}
-
-
 main{
     padding: .5rem;
     padding-top: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 1rem;
 }
 
 .contenedorInformacionCasino{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2rem;
     gap: 2.5rem;
 }
 
@@ -199,17 +206,20 @@ main{
         padding: 2rem;
         width: 90%;
         border-radius: 8px;
-        box-shadow: -.4rem .4rem 10px rgba(120, 120, 120, 0.5);
+        background-color: var(--colorCajasTexto);
+        box-shadow: -.4rem .4rem 0px rgba(120, 120, 120, 0.5);
         font-family: var(--fuenteContenido);
     }
 
         .encabezadoInformacionCasino{
             font-family: var(--fuenteTitulo);
+            font-size: 24px;
+            font-weight: bolder;
+            color: var(--colorTituloCajas);
         }
 
         .textoInformacionCasino{
             font-family: var(--fuenteContenido);
-            
         }
 
         
@@ -226,16 +236,21 @@ main{
         text-align: center;
         font-size: 30px;
         font-family: var(--fuenteTitulo);
+        color: var(--colorLetra);
     }
 
         .novedad {
             width: 14rem;
-            background-color: #fff;
             height: 20rem;
             border-radius: 8px;
             box-shadow: -.2rem .2rem 10px rgba(120, 120, 120, 0.5);
             display: flex;
             flex-direction: column;
+            cursor: pointer;
+        }
+
+        .novedad:hover {
+            opacity: 0.8;
         }
 
             .imagenNovedad {
@@ -251,7 +266,7 @@ main{
                 border-radius: inherit;
                 border-top-left-radius: 0;
                 border-top-right-radius: 0;
-                background-color: aliceblue;
+                background-color: var(--colorCajasTexto);
                 flex: 1 1 auto;
                 text-align: center;
                 font-family: var(--fuenteTitulo);
@@ -316,9 +331,11 @@ main{
             }
 
 footer{
+    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
+    background-color: var(--colorSecundario);
 }
 
 .navFooter {
@@ -327,6 +344,7 @@ footer{
     align-content: center;
     flex-wrap: wrap;
     align-items: center;
+    height: 5rem;
 }
 
     .logoFooter {
@@ -334,22 +352,24 @@ footer{
         align-items: center;
         gap: 1rem;
         overflow: hidden;
-        width: 10rem;
+        width: 11rem;
+        height: 100%;
     }
     
     .logoFooter > img {
         max-width: 4rem;
         flex: 1 1 auto;
+        filter: invert();
+        cursor: pointer;
     }
     
-    .logoFooter > a {
+    .logoFooter > span {
         flex: 1 1 auto;
         font-family: var(--fuenteTitulo);
         font-size: 1.2rem;
         font-weight: bold;
         text-decoration: none;
-        color: #669;
-
+        color: var(--colorLetra);
     }
 
     .redes {
@@ -364,7 +384,8 @@ footer{
         overflow: hidden;
         margin: .5rem;
         font-size: 2.5rem;
-        }
+        cursor: pointer;
+    }
 
         .redes .fa-square-twitter {
             color: rgb(65, 125, 255);
@@ -380,15 +401,22 @@ footer{
 
         
         .redes i:hover, .logoFooter > img:hover{
-            transform: scale(1.1);
+            transform: scale(1.05);
             transition: all 0.2s ease;
-            filter: brightness(1.1);
+            /* filter: brightness(1.1); */
          }
             
-            .footerBreak {
-                border: 2px solid rgba(0, 0, 0, 0.25);
+         .footerBreak {
+             border: 2px solid rgba(0, 0, 0, 0.25);
                 border-radius: 2px;
         margin: 1.5rem 0;
+    }
+
+
+    
+    .encabezadoContactos {
+        font-size: 18px;
+        color: var(--colorAcentoLetra);
     }
 
     .informacionContacto {
@@ -398,7 +426,9 @@ footer{
         gap: .9rem;
         font-family: var(--fuenteContenido);
         margin-bottom: 2rem;
+        color: var(--colorLetra);
     }
+
 
     .enlacesFooter {
         position: relative;
@@ -412,7 +442,7 @@ footer{
 
     .enlacesFooter a {
         text-decoration: none;
-        color: #333;
+        color: var(--colorAcentoLetra);
         font-weight: bold;
         font-family: var(--fuenteContenido);
     }
@@ -423,4 +453,5 @@ footer{
     
     .copyright {
         font-family: var(--fuenteContenido);
+        color: var(--colorLetra);
     }
