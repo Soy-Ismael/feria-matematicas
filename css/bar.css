@@ -10,22 +10,20 @@
     max-width: 1200px;
     margin: 0 auto;
 }
-
-.header {
-    background-image: linear-gradient(
-        rgba(0,0,0,0,7),
-        rgba(0,0,0,0,7)), 
-        url(img_bar/bar1.jpg);
+.header{
+    background-image: url(img_bar/bar3.jpg);
+    background-color: #0f0e0d;
         background-position: center bottom;
         background-repeat: no-repeat; 
         background-size: cover;
         min-height: 70vh;
         display: flex;
         align-items: center;
-    
+        color: #0f0e0d;
 }
 
 .menu {
+    color: white;
     position: relative;
     top: 0;
     left: 0;
@@ -49,8 +47,8 @@
 .menu .navbar ul li a {
     font-size: 18px;
     padding: 20px;
-    color: #FFFDFC;
-    display: block;
+    color: #0f0e0d;
+    display: table-column;
     font-weight: 600;
 }
 
@@ -58,7 +56,7 @@
     color: #CE9678;
 }
 
-#menu {
+.menu {
     display: none;
 }
 
@@ -78,7 +76,7 @@
 .header-content h1 {
     font-size: 75px;
     line-height: 80px;
-    color: #F9FAFC;
+    color: #eff3f3;
     text-transform: uppercase;
     margin-bottom: 35px;
 }
@@ -107,11 +105,35 @@
     background-color: #E1E2E6;
     position: relative;
 }
-
-.bebida-content {
+.comida-content{
+    padding: 20px;
+    border-radius: 8px;
     text-align: center;
+    color: white;
+    background-color: #0f0e0d;
 }
 
+.comida-1{
+    margin: 0 70px 0 0;
+}
+.comida-2{
+    margin: 0 70px 0 10px;
+}
+.bebida-content {
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    background-color: #0f0e0d;
+}
+.comida-content h2{
+    font-size: 55px;
+    line-height: 70px;
+    color: #323337;
+    text-transform: uppercase;
+    padding: 0 250px;
+    margin-bottom: 15px;
+}
 .bebida-content h2 {
     font-size: 55px;
     line-height: 70px;
@@ -133,20 +155,27 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
+   
 }
 
 .bebida-1 {
+    margin: 0  20px 0 0;
     padding: 0 25px;
 }
 
 .bebida-1 img {
-    width: 200px;
+    width: 250px;
+    height: 200px;
 }
 
 .bebida-1 img {
-    position: absolute;
+    position: relative;
+    margin: 0 0 20px 0;
     top: 0;
     right: 0;
+}
+.bebida-2{
+    margin: 0 70px 0 70px;
 }
 
 .bebida-1 h3 {
@@ -154,44 +183,90 @@
     font-size: 20px;
     margin-bottom: 15px;
 }
-
-.comida {
-    background-image: linear-gradient(
-        rgba(0,0,0,0,7),
-        rgba(0,0,0,0,7)), 
-        url(img_bar/bar1.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+.bebida {
     padding: 100px 0;
+    background-color: #E1E2E6;
+    position: relative;
 }
 
-.comida-content {
+.bebida-content {
     text-align: center;
 }
+.bebida img{
+    background-image: url(img_bar/Bebida.jpg);
+}
 
-.comida-content h2{
+.bebida-content h2 {
     font-size: 55px;
     line-height: 70px;
-    color: #F9FAFC;
+    color: #323337;
     text-transform: uppercase;
-    margin-bottom: 50px;
+    padding: 0 250px;
+    margin-bottom: 15px;
 }
 
-.comida-content p {
+
+.txt-p {
     font-size: 16px;
-    color: #F9FAFC;
-    margin-bottom: 50px;
-    padding: 0 100px;
+    color: #414247;
+    padding: 0 250px;
+    margin-bottom: 35px;
+}
+.txt-p2{
+    font-size: 16px;
+    color: #414247;
+    padding: 0 250px;
+    margin-bottom: 35px;
 }
 
-.comida-group {
+.comida-group{
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
 }
 
 .comida-1 {
-    padding: 0 100px;
+
+    padding: 0 25px;
+}
+
+.comida-1 img {
+    width: 200px;
+}
+.comida-2 img{ 
+    width: 300px;
+    height: 200px;
+ 
+}
+.comida-3 img {
+    width: 300px;
+    height: 200px;
+}
+.bebida-3 img{
+    width: 200px;
+    height: 300px;
+}
+.bebida-2 img{
+    width: 200px;
+    height: 300px;
+}
+
+
+.comida-1 img {
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+
+.comida-1 h3 {
+    color: #323337;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.footer{
+    margin: 40px;
+    background-color: #0f0e0d;
+    color: white;
 }
