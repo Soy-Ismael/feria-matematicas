@@ -17,9 +17,11 @@
     /*========== Colors ==========*/
     /*Color mode HSL(hue, saturation, lightness)*/
     --first-color: hsl(230, 75%, 56%);
-    --title-color: hsl(230, 75%, 15%);
+    /* --title-color: hsl(230, 75%, 15%); */
+    --title-color: hsl(225, 29%, 95%);
     --text-color: hsl(230, 12%, 40%);
     --body-color: hsl(230, 100%, 98%);
+    --body-color: hsla(228, 100%, 98%, 0);
     --container-color: hsl(230, 100%, 97%);
     --border-color: hsl(230, 25%, 80%);
 
@@ -150,7 +152,7 @@ img {
     left: 0;
     width: 100%;
     background-color: var(--body-color);
-    box-shadow: 0 2px 16px hsla(230, 75%, 32%, .15);
+    /* box-shadow: 0 2px 16px hsla(230, 75%, 32%, .15); */
     z-index: var(--z-fixed);
 }
 
@@ -190,11 +192,13 @@ img {
 /* Navigation for mobile devices */
 @media screen and (max-width: 1023px) {
     .nav__menu {
+        /* Aqui se cambia el color de la fuente en el menu normal */
         position: fixed;
         top: -100%;
         left: 0;
         background-color: var(--body-color);
-        box-shadow: 0 8px 16px hsla(230, 75%, 32%, .15);
+        /* background-color: var(--option-color); */
+        /* box-shadow: 0 8px 16px hsla(230, 75%, 32%, .15); */
         width: 100%;
         padding-block: 4.5rem 4rem;
         transition: top .4s;
@@ -209,7 +213,9 @@ img {
 }
 
 .nav__link {
+    /* Aqui se cambia el color de las opciones en menu responsive */
     color: var(--title-color);
+    /* color: var(--option-title-color); */
     font-weight: var(--font-semi-bold);
     transition: color .4s;
 }
