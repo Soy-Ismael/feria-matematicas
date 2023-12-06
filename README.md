@@ -5,7 +5,8 @@ Revisen el grupo web para aclarar cualquier duda, gracias.
 
 Antes de realizar cualquier modificación deben descargar los cambios que otras personas han subido, para ello realizen los pasos detallados más abajo
 
-Descargar cambios
+Descsargar cambios
+
 git pull
 
 Al finalizar deben subir sus cambios al repositorio en github, para ello van a realizar los siguentes comandos
