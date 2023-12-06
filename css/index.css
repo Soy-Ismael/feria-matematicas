@@ -20,9 +20,9 @@
     --colorAcento: #f0;
 
     --rojoClaro: #6b0a0a;
-    --rojoOscuro: #440b0b;
+    --fondoIconos: rgb(46, 10, 108);
     --moradoClaro: #551382;
-    --moradoOscuro: #21073a;
+    --fondoHeader: rgb(26, 2, 53);
 
 }
 
@@ -139,7 +139,7 @@ nav .links a {
 
 @media screen and (max-width: 1024px){
     nav .links a{
-        background-color: var(--rojoOscuro);
+        background-color: var(--fondoIconos);
         height: 5rem;
         margin-right: 10px;
     }
@@ -172,7 +172,7 @@ nav .links a {
 
 @media screen and (max-width: 412px){
     nav .links a{
-        background: var(--rojoOscuro);
+        background: var(--fondoIconos);
     }
 }
 
@@ -231,7 +231,7 @@ span{
 
 @media screen and (max-width: 990px){
     .nombreCasino{
-        background-color: var(--moradoOscuro);
+        background-color: var(--fondoHeader);
         margin-bottom: 10px;
     }
 
@@ -306,7 +306,7 @@ span{
 
 @media screen and (max-width: 1025px){
     .textoDescripcion{
-        background-color: var(--moradoOscuro);
+        background-color: var(--fondoHeader);
         margin-bottom: 10px;
     }
 
