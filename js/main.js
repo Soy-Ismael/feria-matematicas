@@ -1,8 +1,8 @@
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById("nav-menu"),
-  navToggle = document.getElementById("nav-toggle"),
-  navClose = document.getElementById("nav-close"),
-  root = document.documentElement;
+    navToggle = document.getElementById("nav-toggle"),
+    navClose = document.getElementById("nav-close"),
+    root = document.documentElement;
 
 /* Menu show */
 navToggle.addEventListener("click", () => {
@@ -51,8 +51,33 @@ loginClose.addEventListener("click", () => {
   login.classList.remove("show-login");
 });
 
-document.addEventListener('scroll', () => {
-  if (screenTop == 500) {
-    alert('La pantalla tiene una altura de 500px')
-  }
-})
+// // Intersection observer
+const main = document.getElementById("main");
+const header = document.getElementById("header");
+
+const callback = (entries) => {
+  console.log(entries)
+    entries.forEach(entry => {
+      console.log(entry);
+        if (entry.isIntersecting) {
+            // console.log("Esta siendo intersectado");
+            // alert("Esta intersectado");
+            root.style.setProperty("--title-color", "#111");
+            root.style.setProperty("--body-color", "hsl(230, 100%, 98%)");
+        }else {
+          root.style.setProperty("--title-color", "white");
+          root.style.setProperty("--body-color", "transparent");
+        }
+    });
+  console.log(entries);
+  
+}
+
+const options = {
+    root: null,
+    rootMargin: "-130px",
+    threshold: 0.1,
+}
+
+const observer = new IntersectionObserver(callback, options)
+observer.observe(main);
