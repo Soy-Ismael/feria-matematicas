@@ -401,12 +401,6 @@ span{
     font-family: var(--fuenteContenido);
 } */
 
-
-
-
-
-
-
 main{
     padding: .5rem;
     padding-top: 3rem;
@@ -468,7 +462,6 @@ main{
             box-shadow: -.2rem .2rem 10px rgba(120, 120, 120, 0.5);
             display: flex;
             flex-direction: column;
-            cursor: pointer;
         }
 
         .novedad:hover {
@@ -477,7 +470,8 @@ main{
 
             .imagenNovedad {
                 width: 100%;
-                height: auto;
+                object-fit: cover;
+                height: 80%;
                 border-radius: inherit;
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
@@ -566,7 +560,7 @@ footer{
     align-content: center;
     flex-wrap: wrap;
     align-items: center;
-    height: 5rem;
+    height: auto;   
 }
 
     .logoFooter {
@@ -585,7 +579,7 @@ footer{
         cursor: pointer;
     }
     
-    .logoFooter > span {
+    .logoFooter > p {
         flex: 1 1 auto;
         font-family: var(--fuenteTitulo);
         font-size: 1.2rem;
@@ -602,20 +596,13 @@ footer{
         padding: .2rem;
         width: 10rem;
     }
-    .redes i{
+    .redes img{
         overflow: hidden;
         margin: .5rem;
-        font-size: 2.5rem;
+        width: 2rem;
         cursor: pointer;
     }
 
-        .redes .fa-square-twitter {
-            color: rgb(65, 125, 255);
-        }
-        
-        .redes .fa-square-facebook {
-            color: rgb(0, 60, 188);
-        }
 
         .redes .fa-square-instagram {
             color: rgb(202, 0, 84);
@@ -660,6 +647,9 @@ footer{
         display: flex;
         justify-content: space-between;
         font-size: 18px;
+        display: flex;
+        gap: .3rem;
+        flex-wrap: wrap;
     }
 
     .enlacesFooter a {

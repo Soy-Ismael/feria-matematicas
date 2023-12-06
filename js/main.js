@@ -1,16 +1,24 @@
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById("nav-menu"),
   navToggle = document.getElementById("nav-toggle"),
-  navClose = document.getElementById("nav-close");
+  navClose = document.getElementById("nav-close"),
+  root = document.documentElement;
 
 /* Menu show */
 navToggle.addEventListener("click", () => {
   navMenu.classList.add("show-menu");
+  // alert('Presiono menu');
+  root.style.setProperty('--title-color', '#111')
+  root.style.setProperty('--body-color', 'hsl(230, 100%, 98%)');
+  // root.style.setProperty('--body-color', 'black')
 });
 
 /* Menu hidden */
 navClose.addEventListener("click", () => {
   navMenu.classList.remove("show-menu");
+  // alert('Presiono salir')
+  root.style.setProperty('--title-color', 'white')
+  root.style.setProperty('--body-color', 'transparent');
 });
 
 /*=============== SEARCH ===============*/

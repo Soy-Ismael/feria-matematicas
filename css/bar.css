@@ -7864,3 +7864,12 @@ h6,
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.img-up{
+  max-width: 100%;
+  margin: 0;
+}
+
+.container-fluid{
+  padding: 0;
+}
