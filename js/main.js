@@ -7,16 +7,13 @@ const navMenu = document.getElementById("nav-menu"),
 /* Menu show */
 navToggle.addEventListener("click", () => {
   navMenu.classList.add("show-menu");
-  // alert('Presiono menu');
   root.style.setProperty('--title-color', '#111')
   root.style.setProperty('--body-color', 'hsl(230, 100%, 98%)');
-  // root.style.setProperty('--body-color', 'black')
 });
 
 /* Menu hidden */
 navClose.addEventListener("click", () => {
   navMenu.classList.remove("show-menu");
-  // alert('Presiono salir')
   root.style.setProperty('--title-color', 'white')
   root.style.setProperty('--body-color', 'transparent');
 });
@@ -51,7 +48,7 @@ loginClose.addEventListener("click", () => {
   login.classList.remove("show-login");
 });
 
-// // Intersection observer
+// Intersection observer
 const main = document.getElementById("main");
 const header = document.getElementById("header");
 
@@ -60,8 +57,6 @@ const callback = (entries) => {
     entries.forEach(entry => {
       console.log(entry);
         if (entry.isIntersecting) {
-            // console.log("Esta siendo intersectado");
-            // alert("Esta intersectado");
             root.style.setProperty("--title-color", "#111");
             root.style.setProperty("--body-color", "hsl(230, 100%, 98%)");
         }else {
@@ -75,9 +70,7 @@ const callback = (entries) => {
 
 const options = {
     root: null,
-    // rootMargin: "-130px",
-    rootMargin: "-100px 0px 100px 0px",
-    // rootMargin: "90vh",
+    rootMargin: "-100px",
     threshold: 0.1,
 }
 
