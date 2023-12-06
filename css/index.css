@@ -1,11 +1,29 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url(/assets/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(/assets/fonts/Roboto/Roboto-Regular.ttf);
+}
+
 :root {
     --fuenteTitulo: 'Open Sans', sans-serif;
     --fuenteContenido: 'Roboto', sans-serif;
     --colorLetra: white;
-    --colorAcentoLetra: #f0;
-    --coloFondo: #f0;
-    --colorSecundario: #f0;
+    --colorTituloCajas: #470e88;
+    --colorCajasTexto: rgb(247, 245, 255);
+    --coloFondo: #0b0810;
+    --colorAcentoLetra: rgb(77, 175, 255);
+    --colorSecundario: rgb(5, 5, 106);
     --colorAcento: #f0;
+
+    --rojoClaro: #6b0a0a;
+    --rojoOscuro: #440b0b;
+    --moradoClaro: #551382;
+    --moradoOscuro: #21073a;
+
 }
 
 * {
@@ -16,7 +34,7 @@
 }
 
 body {
-    background-color: var(--colorLetra);
+    background-color: var(--coloFondo);
 }
 
 
@@ -45,12 +63,37 @@ nav{
     display: flex;
     width: 15em;
     gap: 1rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
 .logo > h1 {
     color: white;
     font-family: var(--fuenteTitulo);
     font-size: 20px;
+}
+
+@media screen and (max-width: 370px){
+    .logo{
+     width: 4rem;
+    }
+    
+     .logo > h1{
+         display: none;
+     }
+   
+ }
+
+@media screen and (max-width: 310px){
+   .logo{
+    width: 4rem;
+   }
+   
+    .logo > h1{
+        display: none;
+    }
+  
 }
 
 .img_Logo{
@@ -60,8 +103,15 @@ nav{
     filter: invert();
 }
 
-.img_Logo:hover{
+.logo:hover{
     opacity: 0.80;
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+@media screen and (max-width: 310px){
+    
+
+  
 }
 
 .links{
@@ -85,24 +135,71 @@ nav .links a {
     flex-grow: 1;
     transition: .3s;
 
-}   
+}  
+
+@media screen and (max-width: 1024px){
+    nav .links a{
+        background-color: var(--rojoOscuro);
+        height: 5rem;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 690px){
+    /* .img_icono{
+        display: none;
+    } */
+
+    span{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 490px){
+    nav .links a{
+        height: 3rem;
+    }
+  
+}
+
+
+@media screen and (max-width: 412px){
+    nav .links a{
+        background: none;
+    }
+  
+}
+
+@media screen and (max-width: 412px){
+    nav .links a{
+        background: var(--rojoOscuro);
+    }
+}
+
+@media screen and (max-width: 310px){
+    nav .links a{
+        background: none;
+        width: 5rem;
+    }
+  
+}
 
 nav .links a > img {
     filter: invert();
 }
 
-nav .links a:hover{
+nav .links a:hover > img{
     opacity: 0.8;
-    filter: brightness(10.5);
-    transition: 1s;
-    flex-grow: 4;
-    flex-shrink: 3;
-    /* transform: scale(1.2); */
+    transition: 0.3s;
+    transform: scale(1.2);
 }
 
+nav .links a:hover > span {
+    filter: brightness(0.5);
+}
 .img_icono{
-    width: 25px;
-    margin-right: 5px;
+    width: 1.5rem;
+    margin-right: .3rem;
 }
 
 span{
@@ -115,16 +212,159 @@ span{
 
 /* Info y demas de aqui para abajo */
 
-.nombreCasino{
-    margin-right: 150px;
-    margin-top: 10px;
-    padding: 20px;
-    color: rgb(205, 111, 255);
-    /* text-shadow: -.1rem .1rem 0 rgba(120, 120, 120, 0.5), .1rem -.1rem 0 rgba(242, 7, 7, 0.5); */
-    border-radius: 16px;
-    font-family: var(--fuenteTitulo);
+.seccionHeroe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 5rem;
 }
 
+.nombreCasino{
+    padding: 20px;
+    color: rgb(205, 111, 255);
+    margin-right: 150px;
+    /* text-shadow: -.1rem .1rem 0 rgba(120, 120, 120, 0.5), .1rem -.1rem 0 rgba(120, 120, 120, 0.5); */
+    font-family: var(--fuenteTitulo);
+    border-radius: 16px;
+}
+
+@media screen and (max-width: 990px){
+    .nombreCasino{
+        background-color: var(--moradoOscuro);
+        margin-bottom: 10px;
+    }
+
+}
+
+@media screen and (max-width: 541px){
+    .nombreCasino{
+        margin-right: 75px;
+    }
+
+}
+
+@media screen and (max-width: 475px){
+    .nombreCasino{
+        margin-right: 30px;
+    }
+
+}
+
+@media screen and (max-width: 431px){
+    .nombreCasino{
+        margin-right: 17px;
+    }
+
+}
+
+@media screen and (max-width: 385px){
+    .nombreCasino{
+        margin-right: -15px;
+        transform: scale(0.7);
+    }
+
+}
+
+
+@media screen and (max-width: 361px){
+    .nombreCasino{
+        transform: scale(0.7);
+        margin-right: -10px;
+    }
+
+}
+
+@media screen and (max-width: 281px){
+    .seccionHeroe{
+        align-items: center;
+    }
+    
+    .nombreCasino{
+        transform: scale(0.7);
+        margin-right:-75px ;
+        
+    }
+
+}
+
+.textoDescripcion{
+    padding: 1.2rem;
+    width: 20rem;
+    margin-right: 95px;
+    /* margin-right: 150px ; */
+    border-radius: 8px;
+}
+
+.textoDescripcion p{
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: var(--fuenteContenido);
+    text-align: center;
+}
+
+@media screen and (max-width: 1025px){
+    .textoDescripcion{
+        background-color: var(--moradoOscuro);
+        margin-bottom: 10px;
+    }
+
+}
+
+@media screen and (max-width: 541px){
+    .textoDescripcion{
+        margin-right: 15px;
+    }
+
+}
+
+@media screen and (max-width: 475px){
+    .textoDescripcion{
+        margin-right: -20px;
+    }
+
+}
+
+@media screen and (max-width: 430px){
+    .textoDescripcion{
+        margin-right: -40px;
+    }
+
+}
+
+@media screen and (max-width: 391px){
+    .textoDescripcion{
+        margin-right: -50px;
+    }
+
+}
+
+@media screen and (max-width: 361px){
+    .textoDescripcion{
+        margin-right: -70px;
+        margin-top: 5px;
+    }
+
+}
+
+@media screen and (max-width: 376px){
+    .textoDescripcion{
+        transform: scale(0.8);
+        margin-right: -75px;
+    }
+
+}
+
+@media screen and (max-width: 290px){
+    
+    .textoDescripcion{
+        transform: scale(0.7);
+        margin-right:-90 ;
+        
+    }
+
+}
 
 /* .contenedorBotonDescripcion{
     width: 100%;
@@ -161,41 +401,20 @@ span{
     font-family: var(--fuenteContenido);
 } */
 
-.seccionHeroe {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-.textoDescripcion{
-    padding: 20px;
-    width: 300px;
-    margin-right: 150px ;
-    border-radius: 8px;
-}
-
-.textoDescripcion p{
-    color: white;
-    font-weight: 500;
-    font-size: 18px;
-    font-family: var(--fuenteContenido);
-    text-align: center;
-}
-
-
 main{
     padding: .5rem;
     padding-top: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 1rem;
 }
 
 .contenedorInformacionCasino{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2rem;
     gap: 2.5rem;
 }
 
@@ -203,17 +422,20 @@ main{
         padding: 2rem;
         width: 90%;
         border-radius: 8px;
-        box-shadow: -.4rem .4rem 10px rgba(120, 120, 120, 0.5);
+        background-color: var(--colorCajasTexto);
+        box-shadow: -.4rem .4rem 0px rgba(120, 120, 120, 0.5);
         font-family: var(--fuenteContenido);
     }
 
         .encabezadoInformacionCasino{
             font-family: var(--fuenteTitulo);
+            font-size: 24px;
+            font-weight: bolder;
+            color: var(--colorTituloCajas);
         }
 
         .textoInformacionCasino{
             font-family: var(--fuenteContenido);
-            
         }
 
         
@@ -230,11 +452,11 @@ main{
         text-align: center;
         font-size: 30px;
         font-family: var(--fuenteTitulo);
+        color: var(--colorLetra);
     }
 
         .novedad {
             width: 14rem;
-            background-color: #fff;
             height: 20rem;
             border-radius: 8px;
             box-shadow: -.2rem .2rem 10px rgba(120, 120, 120, 0.5);
@@ -242,9 +464,14 @@ main{
             flex-direction: column;
         }
 
+        .novedad:hover {
+            opacity: 0.8;
+        }
+
             .imagenNovedad {
                 width: 100%;
-                height: auto;
+                object-fit: cover;
+                height: 80%;
                 border-radius: inherit;
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
@@ -255,7 +482,7 @@ main{
                 border-radius: inherit;
                 border-top-left-radius: 0;
                 border-top-right-radius: 0;
-                background-color: aliceblue;
+                background-color: var(--colorCajasTexto);
                 flex: 1 1 auto;
                 text-align: center;
                 font-family: var(--fuenteTitulo);
@@ -320,9 +547,11 @@ main{
             }
 
 footer{
+    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
+    background-color: var(--colorSecundario);
 }
 
 .navFooter {
@@ -331,6 +560,7 @@ footer{
     align-content: center;
     flex-wrap: wrap;
     align-items: center;
+    height: auto;   
 }
 
     .logoFooter {
@@ -338,22 +568,24 @@ footer{
         align-items: center;
         gap: 1rem;
         overflow: hidden;
-        width: 10rem;
+        width: 11rem;
+        height: 100%;
     }
     
     .logoFooter > img {
         max-width: 4rem;
         flex: 1 1 auto;
+        filter: invert();
+        cursor: pointer;
     }
     
-    .logoFooter > a {
+    .logoFooter > p {
         flex: 1 1 auto;
         font-family: var(--fuenteTitulo);
         font-size: 1.2rem;
         font-weight: bold;
         text-decoration: none;
-        color: #669;
-
+        color: var(--colorLetra);
     }
 
     .redes {
@@ -364,19 +596,13 @@ footer{
         padding: .2rem;
         width: 10rem;
     }
-    .redes i{
+    .redes img{
         overflow: hidden;
         margin: .5rem;
-        font-size: 2.5rem;
-        }
+        width: 2rem;
+        cursor: pointer;
+    }
 
-        .redes .fa-square-twitter {
-            color: rgb(65, 125, 255);
-        }
-        
-        .redes .fa-square-facebook {
-            color: rgb(0, 60, 188);
-        }
 
         .redes .fa-square-instagram {
             color: rgb(202, 0, 84);
@@ -384,15 +610,22 @@ footer{
 
         
         .redes i:hover, .logoFooter > img:hover{
-            transform: scale(1.1);
+            transform: scale(1.05);
             transition: all 0.2s ease;
-            filter: brightness(1.1);
+            /* filter: brightness(1.1); */
          }
             
-            .footerBreak {
-                border: 2px solid rgba(0, 0, 0, 0.25);
+         .footerBreak {
+             border: 2px solid rgba(0, 0, 0, 0.25);
                 border-radius: 2px;
         margin: 1.5rem 0;
+    }
+
+
+    
+    .encabezadoContactos {
+        font-size: 18px;
+        color: var(--colorAcentoLetra);
     }
 
     .informacionContacto {
@@ -402,7 +635,9 @@ footer{
         gap: .9rem;
         font-family: var(--fuenteContenido);
         margin-bottom: 2rem;
+        color: var(--colorLetra);
     }
+
 
     .enlacesFooter {
         position: relative;
@@ -412,11 +647,14 @@ footer{
         display: flex;
         justify-content: space-between;
         font-size: 18px;
+        display: flex;
+        gap: .3rem;
+        flex-wrap: wrap;
     }
 
     .enlacesFooter a {
         text-decoration: none;
-        color: #333;
+        color: var(--colorAcentoLetra);
         font-weight: bold;
         font-family: var(--fuenteContenido);
     }
@@ -427,4 +665,5 @@ footer{
     
     .copyright {
         font-family: var(--fuenteContenido);
+        color: var(--colorLetra);
     }

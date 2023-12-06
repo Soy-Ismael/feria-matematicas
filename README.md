@@ -15,3 +15,5 @@ Subir cambios
 git add .
 git commit -m "comentario descriptivo"
 git push
+
+Al iniciar a trabajar deben ejecutar el git pull y al finalizar el trabajo deben ejecutar el git add, git commit y git push.
