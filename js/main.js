@@ -50,3 +50,9 @@ loginBtn.addEventListener("click", () => {
 loginClose.addEventListener("click", () => {
   login.classList.remove("show-login");
 });
+
+document.addEventListener('scroll', () => {
+  if (screenTop == 500) {
+    alert('La pantalla tiene una altura de 500px')
+  }
+})
