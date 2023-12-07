@@ -1,5 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap"); */
 
 @font-face {
     font-family: 'Open Sans';
@@ -28,7 +28,8 @@
 
     /*========== Font and typography ==========*/
     /*.5rem = 8px | 1rem = 16px ...*/
-    --body-font: "Syne", sans-serif;
+    /* --body-font: "Syne", sans-serif; */
+    --body-font: "Open Sans", sans-serif;
     --h2-font-size: 1.25rem;
     --normal-font-size: .938rem;
 
