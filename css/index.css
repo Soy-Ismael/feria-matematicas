@@ -16,13 +16,13 @@
     --colorCajasTexto: rgb(247, 245, 255);
     --coloFondo: #0b0810;
     --colorAcentoLetra: rgb(77, 175, 255);
-    --colorSecundario: rgb(5, 5, 106);
+    --colorSecundario: rgb(26, 2, 53);
     --colorAcento: #f0;
 
     --rojoClaro: #6b0a0a;
-    --rojoOscuro: #440b0b;
+    --fondoIconos: rgb(46, 10, 108);
     --moradoClaro: #551382;
-    --moradoOscuro: #21073a;
+    --fondoHeader: rgb(26, 2, 53)c;
 
 }
 
@@ -37,7 +37,7 @@ body {
     background-color: var(--coloFondo);
 }
 
-
+/*
 header{
     display: flex;
     flex-direction: column;
@@ -46,13 +46,12 @@ header{
     background: url(/assets/img/casinoBg8r.png);
     background-size: cover;
     background-repeat: no-repeat;
-}
+}*/
 
 /* navegacion y demas de aqui para abajo */
-
+/*
 nav{
     display: flex;
-    /* background-color: blueviolet; */
     height: 16%;
     align-items: center;
     justify-content: space-between;
@@ -139,16 +138,13 @@ nav .links a {
 
 @media screen and (max-width: 1024px){
     nav .links a{
-        background-color: var(--rojoOscuro);
+        background-color: var(--fondoIconos);
         height: 5rem;
         margin-right: 10px;
     }
 }
 
 @media screen and (max-width: 690px){
-    /* .img_icono{
-        display: none;
-    } */
 
     span{
         display: none;
@@ -172,7 +168,7 @@ nav .links a {
 
 @media screen and (max-width: 412px){
     nav .links a{
-        background: var(--rojoOscuro);
+        background: var(--fondoIconos);
     }
 }
 
@@ -206,7 +202,7 @@ span{
     font-family: var(--fuenteTitulo);
     color: white;
     font-size: 17px;
-}
+}*/
 
 /* Navegacion de aqui para arriba */
 
@@ -231,7 +227,7 @@ span{
 
 @media screen and (max-width: 990px){
     .nombreCasino{
-        background-color: var(--moradoOscuro);
+        background-color: var(--fondoHeader);
         margin-bottom: 10px;
     }
 
@@ -306,7 +302,7 @@ span{
 
 @media screen and (max-width: 1025px){
     .textoDescripcion{
-        background-color: var(--moradoOscuro);
+        background-color: var(--fondoHeader);
         margin-bottom: 10px;
     }
 
