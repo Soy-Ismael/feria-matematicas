@@ -35,6 +35,16 @@
     align-items: center;
     gap: 22px;
     background-color: #c2c0c0;
+    transition: transform 300ms;
+}
+
+.aboutUs__card:hover{
+    transform: translateY(-8px);
+}
+
+.aboutUs__card:hover .aboutUs__card__text{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .aboutUs__card__subtitle{
@@ -45,6 +55,9 @@
     padding: 12px;
     font-family: var(--secondary-font);
     text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: transform 300ms, opacity 300ms;
 }
 
 .aboutUs__subTitle-card{
