@@ -8,16 +8,102 @@
     <meta content="Free Website Template" name="keywords">
     <meta content="Free Website Template" name="description">
 
-
     <link href="/img_bar/bar7.jpg" rel="icon">
-
-   
     <link href="/css/bar.css" rel="stylesheet">
-</head>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/header.css">
+</head>
 <body>
- 
-    <div class="container-fluid p-0 nav-bar">
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Logo</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <!-- <li class="nav__item">
+                        <a href="#" class="nav__link">Home</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">About Us</a>
+                    </li> -->
+
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Inicio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="bar.html" class="nav__link">Bar</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="casino.html" class="nav__link">Casino</a>
+                    </li>
+                </ul>
+
+                <!-- Close button -->
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__actions">
+                <!-- Search button -->
+                <i class="ri-search-line nav__search" id="search-btn"></i>
+                <!-- Login button -->
+                <i class="ri-user-line nav__login" id="login-btn"></i>
+                <!-- Toggle button -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== SEARCH ====================-->
+    <div class="search" id="search">
+        <form action="" class="search__form">
+            <i class="ri-search-line search__icon"></i>
+            <input type="search" placeholder="¿Qué estas buscando?" class="search__input">
+        </form>
+
+        <i class="ri-close-line search__close" id="search-close"></i>
+    </div>
+
+    <!--==================== LOGIN ====================-->
+    <div class="login" id="login">
+        <form action="" class="login__form">
+            <h2 class="login__title">Log In</h2>
+            <div class="login__group">
+                <div>
+                    <label for="email" class="login__label">Email</label>
+                    <input type="email" placeholder="Write your email" id="email" class="login__input">
+                </div>
+                <div>
+                    <label for="password" class="login__label">Password</label>
+                    <input type="password" placeholder="Enter your password" id="password" class="login__input">
+                </div>
+            </div>
+            <div>
+                <p class="login__signup">
+                    You do not have an account? <a href="#">Sign up</a>
+                </p>
+                <a href="#" class="login__forgot">
+                    You forgot your password
+                </a>
+                <button type="submit" class="login__button">Log In</button>
+            </div>
+        </form>
+        <i class="ri-close-line login__close" id="login-close"></i>
+    </div>
+
+    <!-- Banner -->
+    <div class="banner">
+        <!-- <img src="assets/img/casinoBg5.jpg" alt="image" class="main__bg"> -->
+        <img src="img_bar/bar6.jpg" alt="image" class="main__bg">
+    </div>
+    <!-- Antiguo header -->
+    <!-- <div class="container-fluid p-0 nav-bar">
         <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
             <a href="index.html" class="navbar-brand px-lg-4 m-0">
                 <h1 class="m-0 display-4 text-uppercase text-white">LOGO</h1>
@@ -34,99 +120,126 @@
                     
             </div>
         </nav>
-    </div>
+    </div> -->
  
     <div class="container-fluid page-header mb-5 position-relative overlay-bottom">
         
-        <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+        <!-- <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
             <img class="img-up" src="/img_bar/bar6.jpg" alt="">
             <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Bar y Restaurante</h1>
             
-        </div>
+        </div> -->
     </div>
- 
-    <div class="container-fluid pt-5">
-        <div class="container">
-            <div class="section-title">
-                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Nuestros Servicios</h4>
-                <h1 class="display-4">Nuestras Bebidas y Comidas más destacadas</h1>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="/img_bar/ensalada-caprese.jpg" alt="">
-                        </div>
-                        <div class="col-sm-7">
-                            <h4><i class="fa fa-truck service-icon"></i>Ensalada Caprese</h4>
-                            <p class="m-0">Experimenta la frescura en cada tenedor con nuestra Ensalada Caprese deconstruida. Tomates heirloom de colores vibrantes se entrelazan con bolas de mozzarella de búfala en una danza de sabores auténticos. Gotas de reducción balsámica añaden un toque agridulce que eleva cada bocado. Una reinterpretación moderna de la clásica caprese, esta ensalada no solo deleita el paladar, sino que también cautiva con su presentación visual, convirtiendo cada plato en una experiencia culinaria sofisticada.</p>
+    <div id="observer">
+        <div class="container-fluid pt-5">
+            <div class="container">
+                <div class="section-title">
+                    <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Nuestros Servicios</h4>
+                    <h1 class="display-4">Nuestras Bebidas y Comidas más destacadas</h1>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 mb-5">
+                        <div class="row align-items-center">
+                            <div class="col-sm-5">
+                                <img class="img-fluid mb-3 mb-sm-0" src="/img_bar/ensalada-caprese.jpg" alt="">
+                            </div>
+                            <div class="col-sm-7">
+                                <h4><i class="fa fa-truck service-icon"></i>Ensalada Caprese</h4>
+                                <p class="m-0">Experimenta la frescura en cada tenedor con nuestra Ensalada Caprese deconstruida. Tomates heirloom de colores vibrantes se entrelazan con bolas de mozzarella de búfala en una danza de sabores auténticos. Gotas de reducción balsámica añaden un toque agridulce que eleva cada bocado. Una reinterpretación moderna de la clásica caprese, esta ensalada no solo deleita el paladar, sino que también cautiva con su presentación visual, convirtiendo cada plato en una experiencia culinaria sofisticada.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="/img_bar/mojito.jpg" alt="">
-                        </div>
-                        <div class="col-sm-7">
-                            <h4><i class="fa fa-coffee service-icon"></i>Mojito</h4>
-                            <p class="m-0">El mojito, un cóctel que despierta tus sentidos con una explosión refrescante. Preparado con menta fresca, azúcar, limón, soda y el toque distintivo del ron, cada sorbo es una danza de sabores vivaces que te transporta a las calles animadas de La Habana. Su combinación única de ingredientes crea una experiencia de sabor fresco y revitalizante, convirtiendo cada trago en un escape a la brisa caribeña. ¡Descubre el arte de la mixología con este clásico refrescante!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="/img_bar/coctel_vampiro.webp" alt="">
-                        </div>
-                        <div class="col-sm-7">
-                            <h4><i class="fa fa-award service-icon"></i>Cóctel Vampire</h4>
-                            <p class="m-0">El "Vampire," un cóctel que despierta la sed de la noche con su mezcla fascinante. Este elixir oscuro combina la riqueza del licor de cereza con la fuerza del vodka, creando un brebaje misterioso y seductor. Adornado con un toque de granadina que parece sangre fresca, este trago cautiva con su apariencia intrigante y su sabor que despierta los sentidos. ¡Deja que el "Vampire" te envuelva en su encanto nocturno y despierte la criatura seductora que llevas dentro!</p>
+                    <div class="col-lg-6 mb-5">
+                        <div class="row align-items-center">
+                            <div class="col-sm-5">
+                                <img class="img-fluid mb-3 mb-sm-0" src="/img_bar/mojito.jpg" alt="">
+                            </div>
+                            <div class="col-sm-7">
+                                <h4><i class="fa fa-coffee service-icon"></i>Mojito</h4>
+                                <p class="m-0">El mojito, un cóctel que despierta tus sentidos con una explosión refrescante. Preparado con menta fresca, azúcar, limón, soda y el toque distintivo del ron, cada sorbo es una danza de sabores vivaces que te transporta a las calles animadas de La Habana. Su combinación única de ingredientes crea una experiencia de sabor fresco y revitalizante, convirtiendo cada trago en un escape a la brisa caribeña. ¡Descubre el arte de la mixología con este clásico refrescante!</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 mb-5">
-                    <div class="row align-items-center">
-                        <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="/img_bar/filetemignom.jpg" alt="">
+                    <div class="col-lg-6 mb-5">
+                        <div class="row align-items-center">
+                            <div class="col-sm-5">
+                                <img class="img-fluid mb-3 mb-sm-0" src="/img_bar/coctel_vampiro.webp" alt="">
+                            </div>
+                            <div class="col-sm-7">
+                                <h4><i class="fa fa-award service-icon"></i>Cóctel Vampire</h4>
+                                <p class="m-0">El "Vampire," un cóctel que despierta la sed de la noche con su mezcla fascinante. Este elixir oscuro combina la riqueza del licor de cereza con la fuerza del vodka, creando un brebaje misterioso y seductor. Adornado con un toque de granadina que parece sangre fresca, este trago cautiva con su apariencia intrigante y su sabor que despierta los sentidos. ¡Deja que el "Vampire" te envuelva en su encanto nocturno y despierte la criatura seductora que llevas dentro!</p>
+                            </div>
                         </div>
-                        <div class="col-sm-7">
-                            <h4><i class="fa fa-table service-icon"></i>Filete Mignon</h4>
-                            <p class="m-0">Sumérgete en la exquisitez con nuestro Filete Mignon, una obra maestra culinaria donde la ternura de la carne se encuentra con la perfección de la cocción. Cada bocado es un viaje sensorial, desde la capa exterior caramelizada hasta el centro jugoso y lleno de sabor. La experiencia se eleva con una seductora salsa de trufa negra que completa este plato con un toque de lujo. Una indulgencia irresistiblemente refinada que redefine el placer de la carne.</p>
+                    </div>
+                    <div class="col-lg-6 mb-5">
+                        <div class="row align-items-center">
+                            <div class="col-sm-5">
+                                <img class="img-fluid mb-3 mb-sm-0" src="/img_bar/filetemignom.jpg" alt="">
+                            </div>
+                            <div class="col-sm-7">
+                                <h4><i class="fa fa-table service-icon"></i>Filete Mignon</h4>
+                                <p class="m-0">Sumérgete en la exquisitez con nuestro Filete Mignon, una obra maestra culinaria donde la ternura de la carne se encuentra con la perfección de la cocción. Cada bocado es un viaje sensorial, desde la capa exterior caramelizada hasta el centro jugoso y lleno de sabor. La experiencia se eleva con una seductora salsa de trufa negra que completa este plato con un toque de lujo. Una indulgencia irresistiblemente refinada que redefine el placer de la carne.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="container-fluid footer text-white mt-5 pt-5 px-0 position-relative overlay-top">
-        <div class="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Informacion de Contacto</h4>
-                <p><i class="fa fa-map-marker-alt mr-2"></i>Nos ubicamos en tal sitio</p>
-                <p><i class="fa fa-phone-alt mr-2"></i>809-365-2115</p>
-                <p class="m-0"><i class="fa fa-envelope mr-2"></i>royaldice.com</p>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Siguenos</h4>
-                <p>Nuestras Redes Sociales</p>
-                <div class="d-flex justify-content-start">
-                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+        <footer>
+            <div class="navFooter">
+                <a class="logoFooter">
+                    <img src="assets/icons/token.svg" alt="">
+                    <p href="index.html">Royal Dice</p>
+                </a>
+                <div class="redes">
+                    <a href="/"><img src="assets/icons/square-x-twitter.svg" class="fa-square-twitter"></img></a>
+                    <a href="/"><img src="assets/icons/square-facebook.svg" class="fa-square-facebook"></img></a>
+                    <a href="/"><img src="assets/icons/square-instagram.svg" class="fa-square-instagram"></img></a>
                 </div>
             </div>
-       
-           
-        <div class="container-fluid text-center text-white border-top mt-4 py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
-            <p class="mb-2 text-white">Copyright Royal Dice</a></p>
-           
+            <hr class="footerBreak">
+            <div class="informacionContacto">
+                <h5 class="encabezadoContactos">Información de contacto</h5>
+                <p class="email">royaldice@gmail.com</p>
+                <p class="numeroTelefono">(829) 485-4773</p>
+            </div>
+            <div class="enlacesFooter">
+                <a href="/">Acerca de</a>
+                <a href="/">Politica de privacidad</a>
+            </div>
+            <hr class="footerBreak">
+            <p class="copyright">@ 2023 Casino Sin Nombre</p>
+        </footer>
+        <!-- Antiguo footer -->
+        <!-- <div class="container-fluid footer text-white mt-5 pt-5 px-0 position-relative overlay-top">
+            <div class="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Informacion de Contacto</h4>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i>Nos ubicamos en tal sitio</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>809-365-2115</p>
+                    <p class="m-0"><i class="fa fa-envelope mr-2"></i>royaldice.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Siguenos</h4>
+                    <p>Nuestras Redes Sociales</p>
+                    <div class="d-flex justify-content-start">
+                        <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+        
+            
+            <div class="container-fluid text-center text-white border-top mt-4 py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+                <p class="mb-2 text-white">Copyright Royal Dice</a></p>
+            
+            </div>
         </div>
+        
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a> -->
     </div>
-    
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

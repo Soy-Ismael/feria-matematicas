@@ -25,9 +25,6 @@
   --color-custom: #fbf4ed;
   --other: #f1dcc3;
   
-
-  
-  
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -58,6 +55,7 @@ body {
   color: var(--color-body);
   text-align: left;
   background-color: var(--background-color-body);
+  /* max-width: 100%; */
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -7640,4 +7638,8 @@ h6,
 
 .container-fluid{
   padding: 0;
+}
+
+*{
+  text-decoration: none !important;
 }

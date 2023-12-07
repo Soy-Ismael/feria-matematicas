@@ -16,13 +16,15 @@
     --colorCajasTexto: rgb(247, 245, 255);
     --coloFondo: #0b0810;
     --colorAcentoLetra: rgb(77, 175, 255);
-    --colorSecundario: rgb(26, 2, 53);
+    /* --colorSecundario: rgb(26, 2, 53); */
+    --colorSecundario: #313131;
+    --bodyColor: #DDEEFC;
     --colorAcento: #f0;
 
     --rojoClaro: #6b0a0a;
     --fondoIconos: rgb(46, 10, 108);
     --moradoClaro: #551382;
-    --fondoHeader: rgb(26, 2, 53)c;
+    --fondoHeader: rgb(26, 2, 53);
 
 }
 
@@ -34,7 +36,8 @@
 }
 
 body {
-    background-color: var(--coloFondo);
+    /* background-color: var(--coloFondo); */
+    background: var(--bodyColor);
 }
 
 /*
@@ -663,3 +666,7 @@ footer{
         font-family: var(--fuenteContenido);
         color: var(--colorLetra);
     }
+
+.encabezadoActividades, .encabezadoNovedades{
+    color: var(--colorSecundario);
+}

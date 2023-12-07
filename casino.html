@@ -9,10 +9,10 @@
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="/css/casino.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/header.css">
+    <!-- <link rel="stylesheet" href="/css/footer.css"> -->
     <!-- Tarjeta de credito -->
     <link rel="stylesheet" href="/css/card.css">
+    <link rel="stylesheet" href="/css/header.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
 
     <title>Royal Dice</title>
@@ -114,15 +114,15 @@
                 <div class="aboutUs__container">
                     <article class="aboutUs__card">
                         <h3 class="aboutUs__card__subtitle">¿Qué hacemos?</h3>
-                        <p class="aboutUs__card__text">lorem ipsum dolor sit amet</p>
+                        <p class="aboutUs__card__text">Ofrecemos servicios de entretenimiento para adultos como maquinas tragaperras y juegos de Black Jack</p>
                     </article>
                     <article class="aboutUs__card">
                         <h3 class="aboutUs__card__subtitle">¿Cómo lo hacemos?</h3>
-                        <p class="aboutUs__card__text">lorem ipsum dolor sit amet</p>
+                        <p class="aboutUs__card__text">Financiamos todas y cada una de las actividades que ofrecemos mediante los ingresos que obtenemos de los clientes que satisfacemos</p>
                     </article>
                     <article class="aboutUs__card">
                         <h3 class="aboutUs__card__subtitle">¿Por qué lo hacemos?</h3>
-                        <p class="aboutUs__card__text">lorem ipsum dolor sit amet</p>
+                        <p class="aboutUs__card__text">Detectamos la necesidad de actividades de oseo para adultos en esta zona y decidimos satisfacer esa necesidad</p>
                     </article>
                 </div>
             </section>
@@ -245,30 +245,30 @@
                     </div>
                     <div class="card-form__inner">
                         <div class="card-input">
-                            <label for="cardNumber" class="card-input__label">Card Number</label>
+                            <label for="cardNumber" class="card-input__label">Numero de tarjeta</label>
                             <input type="text" id="cardNumber" class="card-input__input" v-mask="generateCardNumberMask"
                                 v-model="cardNumber" v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardNumber"
                                 autocomplete="off">
                         </div>
                         <div class="card-input">
-                            <label for="cardName" class="card-input__label">Card Holders</label>
+                            <label for="cardName" class="card-input__label">Titular de la tarjeta</label>
                             <input type="text" id="cardName" class="card-input__input" v-model="cardName"
                                 v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardName" autocomplete="off">
                         </div>
                         <div class="card-form__row">
                             <div class="card-form__col">
                                 <div class="card-form__group">
-                                    <label for="cardMonth" class="card-input__label">Expiration Date</label>
+                                    <label for="cardMonth" class="card-input__label">Fecha de expiracion</label>
                                     <select class="card-input__input -select" id="cardMonth" v-model="cardMonth"
                                         v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardDate">
-                                        <option value="" disabled selected>Month</option>
+                                        <option value="" disabled selected>Mes</option>
                                         <option v-bind:value="n < 10 ? '0' + n : n" v-for="n in 12"
                                             v-bind:disabled="n < minCardMonth" v-bind:key="n">
                                             {{n < 10 ? '0' + n : n}} </option>
                                     </select>
                                     <select class="card-input__input -select" id="cardYear" v-model="cardYear"
                                         v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardDate">
-                                        <option value="" disabled selected>Year</option>
+                                        <option value="" disabled selected>Año</option>
                                         <option v-bind:value="$index + minCardYear" v-for="(n, $index) in 12" v-bind:key="n">
                                             {{$index + minCardYear}}
                                         </option>
@@ -300,7 +300,7 @@
                     <p href="index.html">Royal Dice</p>
                 </a>
                 <div class="redes">
-                    <a href="/"><img src="assets/icons/square-twitter.svg" class="fa-square-twitter"></img></a>
+                    <a href="/"><img src="assets/icons/square-x-twitter.svg" class="fa-square-twitter"></img></a>
                     <a href="/"><img src="assets/icons/square-facebook.svg" class="fa-square-facebook"></img></a>
                     <a href="/"><img src="assets/icons/square-instagram.svg" class="fa-square-instagram"></img></a>
                 </div>

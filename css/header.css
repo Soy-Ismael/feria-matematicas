@@ -44,6 +44,9 @@
 
     --primary-font: 'Open Sans', sans-serif;
     --secondary-font: 'Roboto', sans-serif;
+
+    --bgColor: #0b0810;
+    --secondBgColor: #313131;
 }
 
 /*========== Responsive typography ==========*/
@@ -75,6 +78,7 @@ button {
 body {
     background-color: var(--body-color);
     color: var(--text-color);
+    /* background-color: var(--bgColor); */
 }
 
 input,
@@ -420,4 +424,8 @@ img {
     .container {
         margin-inline: auto;
     }
+}
+
+* header{
+    transition: all 350ms;
 }
