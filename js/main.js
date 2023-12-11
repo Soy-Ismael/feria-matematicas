@@ -2,7 +2,8 @@
 const navMenu = document.getElementById("nav-menu"),
     navToggle = document.getElementById("nav-toggle"),
     navClose = document.getElementById("nav-close"),
-    root = document.documentElement;
+    root = document.documentElement,
+    svg = document.querySelector("img");
 
 /* Menu show */
 navToggle.addEventListener("click", () => {
@@ -53,18 +54,22 @@ const main = document.getElementById("main");
 const header = document.getElementById("header");
 
 const callback = (entries) => {
-  console.log(entries)
+  // console.log(entries)
     entries.forEach(entry => {
-      console.log(entry);
+      // console.log(entry);
         if (entry.isIntersecting) {
             root.style.setProperty("--title-color", "#111");
             root.style.setProperty("--body-color", "hsl(230, 100%, 98%)");
+            // console.log("MOSTRAR")
+            svg.setAttribute('src', 'assets/icons/logo.svg');
+            svg
         }else {
           root.style.setProperty("--title-color", "white");
           root.style.setProperty("--body-color", "transparent");
+          svg.setAttribute('src', 'assets/icons/logoblanco.svg');
         }
     });
-  console.log(entries);
+  // console.log(entries);
   
 }
 

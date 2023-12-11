@@ -43,7 +43,7 @@
 }
 
 .aboutUs__card:hover .aboutUs__card__text{
-    opacity: 1;
+    /* opacity: 1; */
     transform: translateY(0);
 }
 
@@ -55,7 +55,7 @@
     padding: 12px;
     font-family: var(--secondary-font);
     text-align: center;
-    opacity: 0;
+    /* opacity: 0; */
     transform: translateY(10px);
     transition: transform 300ms, opacity 300ms;
 }

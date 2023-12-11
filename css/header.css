@@ -173,6 +173,7 @@ img {
     color: var(--title-color);
     font-weight: var(--font-semi-bold);
     transition: color .4s;
+    max-width: 70px;
 }
 
 .nav__actions {
